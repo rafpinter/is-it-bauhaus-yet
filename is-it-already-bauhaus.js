@@ -456,7 +456,7 @@ function save_img() {
     var filename = "it-is-now-" + yyyy + "-" + mm + "-" + dd + ".png";
 
     // Save the canvas
-    // let file = save(filename);
+    let file = save(filename);
 
     return (file)
 }

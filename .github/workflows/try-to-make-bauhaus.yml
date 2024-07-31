@@ -31,7 +31,7 @@ jobs:
 
     - name: Start HTTP server and save image
       run: |
-        node server.js
+        node server.js &
         node save_image.js
         ls
         git config --global user.name "Rafaela Pinter"
