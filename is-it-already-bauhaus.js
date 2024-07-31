@@ -77,7 +77,7 @@ var cube;
 // Setup function
 function setup() {
     // Cube dimensions
-    dim_cube = floor(random(1, 20));
+    dim_cube = floor(random(0, 20));
 
     // Objects Grid
     ext_space = floor(random(90, 120));
@@ -101,10 +101,10 @@ function setup() {
 
     // Objects Randomness
     random_sizes = floor(random(0, 2));
-    inc_limit = floor(random(0, 10));
+    inc_limit = floor(random(0, 300));
     random_stroke = floor(random(0, 2));
     random_objects = floor(random(0, 2));
-    object_number = 0; // Square:0 | Circle:1 | Triangle:2
+    object_number = floor(random(0, 3)); // Square:0 | Circle:1 | Triangle:2
 
     // Hidden objects
     max_random_number = floor(random(0, 10));
@@ -453,10 +453,10 @@ function save_img() {
     var yyyy = today.getFullYear();
 
     // Create the filename
-    var filename = "imgs/it-is-now-" + yyyy + "-" + mm + "-" + dd + ".png";
+    var filename = "it-is-now-" + yyyy + "-" + mm + "-" + dd + ".png";
 
     // Save the canvas
-    let file = save(filename);
+    // let file = save(filename);
 
     return (file)
 }

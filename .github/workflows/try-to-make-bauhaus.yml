@@ -36,7 +36,7 @@ jobs:
         ls
         git config --global user.name "Rafaela Pinter"
         git config --global user.email "rpinter811@gmail.com"
-        git add screenshot.png
+        git add "imgs/it-is-now-$(date +%Y-%m-%d).png"
         git commit -m "new image!!"
         git push
       env:
