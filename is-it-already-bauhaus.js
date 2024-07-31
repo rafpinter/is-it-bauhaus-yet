@@ -163,7 +163,7 @@ function draw() {
     txtBottom();
 
     // Save image
-    save_img();
+    console.log(save_img())
 }
 
 function txtBottom() {
@@ -456,7 +456,9 @@ function save_img() {
     var filename = "imgs/it-is-now-" + yyyy + "-" + mm + "-" + dd + ".png";
 
     // Save the canvas
-    save(filename);
+    let file = save(filename);
+
+    return (file)
 }
 
 
