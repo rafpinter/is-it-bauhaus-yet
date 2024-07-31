@@ -23,16 +23,13 @@ jobs:
       run: |
         npm install express
 
-    - name: Start HTTP server
+    - name: Start HTTP server and save image
       run: |
         node server.js &
-      #  sleep 5 # Wait for the server to start
-
-    - name: Run tests with Puppeteer
-      run: |
-        npm install puppeteer
         node save_image.js
         ls
+      #  sleep 5 # Wait for the server to start
+
 
     # - name: Commit Image
     #   uses: actions/checkout@v3
