@@ -470,7 +470,7 @@ jobs:
                 var yyyy = today.getFullYear();
 
                 // Create the filename
-                var filename = "imgs/it-is-now-" + yyyy + "-" + mm + "-" + dd + ".png";
+                var filename = "it-is-now-" + yyyy + "-" + mm + "-" + dd + ".png";
 
                 // Save the canvas
                 save(filename);
@@ -483,9 +483,10 @@ jobs:
             
       - users: actions/checkout@v3
       - name: Commit Image
+      # how about sending me an email if you read all this?
         run: |
-        git config user.name "Rafaela Pinter"
-        git user.email "rpinter811@gmail.com"
+        git config --global user.name "Rafaela Pinter"
+        git config --global user.email "rpinter811@gmail.com" 
         git add .
         git commit -m "new image!!"
         git push
