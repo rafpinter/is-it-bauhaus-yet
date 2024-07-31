@@ -26,23 +26,29 @@ jobs:
     - name: Start HTTP server
       run: |
         node server.js &
-        sleep 5 # Wait for the server to start
+      #  sleep 5 # Wait for the server to start
 
-    - name: Commit Image
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-      
-    - name: Configure Git
+    - name: Run tests with Puppeteer
       run: |
+        npm install puppeteer
+        node test.js
         ls
-        git config --global user.name "Rafaela Pinter"
-        git config --global user.email "rpinter811@gmail.com"
-      # if you read up until here, how about sending me a hi?
-    - name: Commit and Push Image
-      run: |
-        git add .
-        git commit -m "new image!!"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # - name: Commit Image
+    #   uses: actions/checkout@v3
+    #   with:
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+      
+    # - name: Configure Git
+    #   run: |
+    #     ls
+    #     git config --global user.name "Rafaela Pinter"
+    #     git config --global user.email "rpinter811@gmail.com"
+    #   # if you read up until here, how about sending me a hi?
+    # - name: Commit and Push Image
+    #   run: |
+    #     git add .
+    #     git commit -m "new image!!"
+    #     git push
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
