@@ -38,7 +38,7 @@ jobs:
         git config --global user.email "rpinter811@gmail.com"
         git add "imgs/it-is-now-$(date +%Y-%m-%d).png"
         git commit -m "new image!!"
-        git push
+        git push -f origin main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       #  sleep 5 # Wait for the server to start
