@@ -104,7 +104,7 @@ function setup() {
     inc_limit = floor(random(0, 300));
     random_stroke = floor(random(0, 2));
     random_objects = floor(random(0, 2));
-    object_number = floor(random(0, 3)); // Square:0 | Circle:1 | Triangle:2
+    object_number = floor(random(0, 3));
 
     // Hidden objects
     max_random_number = floor(random(0, 10));
