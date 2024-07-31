@@ -2,4 +2,4 @@
 
 Everyday a Github action will create another image in the [imgs](https://github.com/rafpinter/cronjob-always-green/tree/main/imgs) folder. 
 
-Please tell me when it is already Bauhaus.
+Please let me know when it is already Bauhaus.
