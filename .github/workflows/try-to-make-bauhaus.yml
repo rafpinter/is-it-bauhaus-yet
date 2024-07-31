@@ -481,12 +481,20 @@ jobs:
             maybe the code is also bauhaus?
             */
             
-      - name: Commit Image
-        users: actions/checkout@v3
-      # how about sending me an email if you read all this?
-        run: |
-        git config --global user.name "Rafaela Pinter"
-        git config --global user.email "rpinter811@gmail.com" 
-        git add .
-        git commit -m "new image!!"
-        git push
+- name: Commit Image
+  uses: actions/checkout@v3
+  with:
+    token: ${{ secrets.GITHUB_TOKEN }}
+  
+- name: Configure Git
+  run: |
+    git config --global user.name "Rafaela Pinter"
+    git config --global user.email "rpinter811@gmail.com"
+  # if you read up until here, how about sending me a hi?
+- name: Commit and Push Image
+  run: |
+    git add .
+    git commit -m "new image!!"
+    git push
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
