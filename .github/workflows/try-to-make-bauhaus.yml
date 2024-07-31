@@ -488,6 +488,7 @@ jobs:
         
       - name: Configure Git
         run: |
+          ls
           git config --global user.name "Rafaela Pinter"
           git config --global user.email "rpinter811@gmail.com"
         # if you read up until here, how about sending me a hi?
