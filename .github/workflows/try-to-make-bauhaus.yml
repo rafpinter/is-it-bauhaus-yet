@@ -481,8 +481,8 @@ jobs:
             maybe the code is also bauhaus?
             */
             
-      - users: actions/checkout@v3
       - name: Commit Image
+        users: actions/checkout@v3
       # how about sending me an email if you read all this?
         run: |
         git config --global user.name "Rafaela Pinter"
