@@ -31,7 +31,7 @@ jobs:
     - name: Run tests with Puppeteer
       run: |
         npm install puppeteer
-        node test.js
+        node save_image.js
         ls
 
     # - name: Commit Image
