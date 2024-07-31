@@ -474,6 +474,7 @@ jobs:
 
                 // Save the canvas
                 save(filename);
+                console.log("salva esta merda")
             }
 
 
