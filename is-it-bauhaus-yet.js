@@ -16,7 +16,7 @@ What if I:
 - remove some objects and add random strokes?
 - create some projections?
 
-Is it already Bauhaus?
+Is it Bauhaus yet?
 
 Rafaela Pinter
 */
